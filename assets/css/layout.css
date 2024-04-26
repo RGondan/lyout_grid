@@ -1,0 +1,107 @@
+header { grid-area: header; }
+menu { grid-area: menu; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+body {
+    display: grid;
+    grid-template-areas: 
+        'header header header header'
+        'menu main main main'
+        'footer footer footer footer';
+
+    min-height: 100vh;
+    overflow: scroll;
+
+    --color-1: #25527B;
+    --color-2: #E7E7E7;
+    --color-3: #ffffff;
+    --color-4: #b0b0b0;
+    --color-5: #000000;
+
+    background-color: var(--color-2);
+}
+
+body, header, menu, main, footer, .card, button{ 
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header {
+    background-color: var(--color-1);
+    color: var(--color-3);
+}
+
+footer {
+    background-color: var(--color-3);
+    padding: 20px;
+}
+
+header, footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+}
+
+menu {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+    color: var(--color-4);
+}
+
+.menue_title {
+    color: var(--color-5);
+}
+
+menu a {
+    color: var(--color-5);
+    text-decoration: none;
+}
+
+/* esta es una terrible idea, pero es asi por los requerimientos del desafio */
+main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card {
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color-3);
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.img img {
+    width: 100%;
+}
+
+.card button {
+    background-color: var(--color-1);
+    color: var(--color-3);
+    width: 100%;
+    padding: 4px 0;
+    border: none;
+}
